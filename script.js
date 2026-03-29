@@ -1,12 +1,12 @@
-// NO button moves
+// Elements
 const noBtn = document.getElementById("no");
 const box = document.getElementById("box");
 
+// "No" button moves away
 if (noBtn && box) {
   noBtn.addEventListener("mouseover", () => {
     const maxX = box.clientWidth - noBtn.clientWidth;
     const maxY = box.clientHeight - noBtn.clientHeight;
-
     noBtn.style.left = Math.random() * maxX + "px";
     noBtn.style.top = Math.random() * maxY + "px";
   });
@@ -20,7 +20,6 @@ function startHearts() {
     heart.innerHTML = "💖";
     heart.style.left = Math.random() * 100 + "vw";
     document.body.appendChild(heart);
-
     setTimeout(() => heart.remove(), 5000);
   }, 200);
 }
@@ -49,12 +48,14 @@ function playLove() {
   const audio = document.getElementById("loveAudio");
 
   if (msg) msg.innerHTML = "Happy Birthday ❤️🎂";
-  if (audio) audio.load(); // reload to ensure play
-  if (audio) audio.play().catch(() => alert("Tap again to play music 🎵"));
+  if (audio) {
+    audio.load(); 
+    audio.play().catch(() => alert("Tap again to play music 🎵"));
+  }
 }
 
-// Popup on cake
-function togglePigNote(event) {
+// Popup toggle
+function togglePigNote() {
   const popup = document.getElementById("pigPopup");
   if (!popup) return;
 
