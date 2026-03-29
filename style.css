@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  overflow: hidden;
+}
+
+.box {
+  background: white;
+  padding: 45px;
+  border-radius: 25px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 2;
+}
+
+.final-box {
+  padding-top: 35px;
+}
+
+.big-text {
+  font-size: 30px;
+  color: #ff2e63;
+}
+
+.cute-text {
+  font-size: 20px;
+  color: #555;
+}
+
+/* ICON */
+.pig {
+  font-size: 80px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.bounce {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* BUTTONS */
+button {
+  padding: 16px 34px;
+  font-size: 22px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.big-btn {
+  font-size: 22px;
+}
+
+.info-btn {
+  background: #ff2e63;
+  color: white;
+  margin-top: 20px;
+}
+
+.buttons {
+  position: relative;
+  height: 110px;
+  margin-top: 35px;
+}
+
+#yes {
+  background: #ff2e63;
+  color: white;
+}
+
+#no {
+  background: #adb5bd;
+  color: red;
+  position: absolute;
+  left: 190px;
+  top: 0;
+}
+
+/* HEARTS */
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 24px;
+  animation: float 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* TYPING */
+.typing {
+  min-height: 90px;
+  border-right: none;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* BUTTON */
+.love-btn {
+  margin-top: 20px;
+  padding: 16px 36px;
+  font-size: 22px;
+  border-radius: 40px;
+  background: #ff2e63;
+  color: white;
+  cursor: pointer;
+}
+
+.love-message {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #ff2e63;
+  font-weight: bold;
+}
+
+/* POPUP */
+.pig-popup {
+  position: absolute;
+  background: #ff2e63;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 300px;
+  display: none;
+}
