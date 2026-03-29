@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="box final-box">
+
+    <div class="pig bounce" onclick="togglePigNote(event)">
+      🎂
+    </div>
+
+    <!-- Typing message -->
+    <h1 class="big-text typing" id="typingText"></h1>
+
+    <p class="cute-text">Wishing you happiness forever 💕</p>
+
+    <!-- BUTTON -->
+    <button class="love-btn" onclick="playLove()">
+      Click for Birthday Wish 🎁
+    </button>
+
+    <p id="loveMessage" class="love-message"></p>
+
+    <!-- Popup -->
+    <div id="pigPopup" class="pig-popup">
+   <br><br>
+        Happy Birthday Bebo ❤️<br><br>
+
+Thank you for being my constant support.<br><br>
+
+They say distance makes the heart grow fonder,<br>
+but honestly it just makes me realize what you really mean to me ❤️<br><br>
+
+I love you and I miss you so much, Bebo 🥺<br>
+but I'm holding onto all our beautiful memories until you're back 🫂<br><br>
+
+Stay safe, stay strong 💖<br>
+and you know that I'm counting down the days until you're back 😇
+  </div>
+
+  <!-- ✅ MPEG SAFE AUDIO -->
+  <audio id="loveAudio">
+    <source src="Khat.mpeg" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+
+  <!-- ✅ SAFE LOAD -->
+  <script>
+    window.onload = function () {
+      if (typeof startHearts === "function") startHearts();
+      if (typeof startTyping === "function") startTyping();
+    };
+  </script>
+
+</body>
+</html>
